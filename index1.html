@@ -50,7 +50,7 @@
             -webkit-flex: 1;
             -ms-flex: 1;
             flex: 1;
-            background: #ccc;
+            background: rgb(226, 228, 112);
             padding: 20px;
         }
         /* Style the content */
@@ -70,17 +70,32 @@
             cursor: pointer;
         }
         
+        .button_down {
+            background-color: #ee3636;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 10px 12px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
         article {
             -webkit-flex: 3;
             -ms-flex: 3;
             flex: 3;
-            background-color: #f1f1f1;
+            background-color: #f7fa5d;
             padding: 10px;
         }
         /* Style the footer */
         
         footer {
-            background-color: #777;
+            background-color: rgb(228, 167, 133);
             padding: 10px;
             text-align: center;
             color: white;
@@ -110,7 +125,7 @@
         
         li a:hover,
         .dropdown:hover .dropbtn {
-            background-color: red;
+            background-color: rgba(165, 1, 1, 0.582);
         }
         
         li.dropdown {
@@ -150,6 +165,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
 </head>
 
 <body>
@@ -168,50 +184,51 @@
 
     </header>
 
-
-
-
-
-
-
-
-    /*<button class="button" onclick="request()">Join Now</button>*/
     <h2>Foodpanda</h2>
-    <p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p>
-    <p>Resize the browser window to see the responsive effect.</p>
-    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 and earlier versions.</p>
+    <p>Order food from the best restaurants with foodpanda Bangladesh Are you hungry? Did you have a long and stressful day? Interested in getting a cheesy pizza delivered to your home or office? Then foodpanda Bangladesh is the right destination for you!
+        foodpanda offers you a long and detailed list of the best restaurants and local favourites near you to help satisfy your hunger through our online food delivery service. Cuisines are diverse: whether you fancy a juicy burger from Takeout, fresh
+        sushi from Samdado or peri peri chicken from Nando's, foodpanda Bangladesh has a wide range of 2000+ restaurants available from Dhaka, to Chittagong through to Sylhet. From a healthy lunch to evening snacks to a hearty dinner, foodpanda provides
+        you with the means to satisfy your cravings throughout the day. Sit back and relax - let foodpanda Bangladesh take the pressure off your shoulders.
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-
-    <p>Note: We use href="#" for test links. In a real web site this would be URLs.</p>
+    </p>
 
     <header>
-        <h2>Cities</h2>
+        <h2>Select Your Menu</h2>
     </header>
 
     <section>
         <nav>
             <ul>
-                <li><a href="#">London</a></li>
-                <li><a href="#">Paris</a></li>
-                <li><a href="#">Tokyo</a></li>
+                <li><a href="#">Burger</a></li>
+                <li><a href="#">Pizza</a></li>
+                <li><a href="#">Steak</a></li>
             </ul>
+            <button class="button" onclick="menu()">Show more</button>
+            <div id="menu"></div>
+
+
         </nav>
 
         <article>
-            <h1>London</h1>
-            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+            <div>
+                <h1>Burger</h1>
+                A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.
+            </div>
+            <div>
+                <h1>Pizza</h1>
+                A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.
+            </div>
+            <div>
+                <h1>Steak</h1>
+                A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.
+            </div>
         </article>
     </section>
 
     <footer>
-        <p>Footer</p>
+        <a class="button_down" href="city.html">Cities We are Available</a>
+
+        <script src="script.js"></script>
     </footer>
 
 </body>
