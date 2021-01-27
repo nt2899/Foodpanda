@@ -4,6 +4,7 @@
 <head>
     <title></title>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         * {
@@ -156,6 +157,18 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        
+        .Burger {
+            display: none;
+        }
+        
+        .Pizza {
+            display: none;
+        }
+        
+        .Steak {
+            display: none;
+        }
         /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
         
         @media (max-width: 600px) {
@@ -165,11 +178,11 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+
     <script src="script.js"></script>
 
     <header>
@@ -200,12 +213,14 @@
     <section>
         <nav>
             <ul>
-                <li><a href="#">Burger</a></li>
-                <li><a href="#">Pizza</a></li>
-                <li><a href="#">Steak</a></li>
+                <li><button class="button" onclick="show_hideB()">Burger</button></li>
+                <li><button class="button" onclick="show_hideP()">Pizza</button></li>
+                <li><button class="button" onclick="menu()">Image</button></li>
+                <li><button class="button" onclick="show_hideS()">Steak</button></li>
+
             </ul>
-            <button class="button" onclick="menu()">Show more</button>
-            <div id="menu"></div>
+            <!-- <button class="button" onclick="menu()">Show more</button>
+            <div id="menu"></div> -->
 
 
         </nav>
@@ -215,11 +230,11 @@
                 <h1>Burger</h1>
                 A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.
             </div>
-            <div>
+            <div class="Pizza">
                 <h1>Pizza</h1>
                 A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.
             </div>
-            <div>
+            <div class="Steak">
                 <h1>Steak</h1>
                 A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.
             </div>

@@ -81,7 +81,6 @@ function City() {
 
     var i, j;
 
-
     fetch("https://jsonplaceholder.typicode.com/posts/1/comments")
         .then(function(response) {
             return response.json()
@@ -155,21 +154,21 @@ function menu() {
 }
 
 function show_hideB() {
-    $(".article").show();
+    // $(".article").show();
     $(".Burger").show();
     $(".Pizza").hide();
     $(".Steak").hide();
 }
 
 function show_hideP() {
-    $(".article").show();
+    //  $(".article").show();
     $(".Burger").hide();
     $(".Pizza").show();
     $(".Steak").hide();
 }
 
 function show_hideS() {
-    $(".article").show();
+    // $(".article").show();
     $(".Burger").hide();
     $(".Pizza").hide();
     $(".Steak").show();
