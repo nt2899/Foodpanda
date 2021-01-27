@@ -24,7 +24,7 @@ function request() {
                 var applyhtml = `<div class="row">
                 <div class="col-sm-1">` + response[i].id + `</div>
                 <div class="col-sm-5">` + response[i].title + `</div>
-                <div class="col-sm-6">` + x + `</div></div>`;
+                <div class="col-sm-6">` + x.outerHTML + `</div></div>`;
 
                 con.innerHTML += applyhtml;
                 // con.innerHTML += x;;
@@ -152,4 +152,25 @@ function City() {
 
 function menu() {
     window.open("menu.html");
+}
+
+function show_hideB() {
+    $(".article").show();
+    $(".Burger").show();
+    $(".Pizza").hide();
+    $(".Steak").hide();
+}
+
+function show_hideP() {
+    $(".article").show();
+    $(".Burger").hide();
+    $(".Pizza").show();
+    $(".Steak").hide();
+}
+
+function show_hideS() {
+    $(".article").show();
+    $(".Burger").hide();
+    $(".Pizza").hide();
+    $(".Steak").show();
 }
