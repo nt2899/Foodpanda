@@ -153,11 +153,6 @@ function City() {
 
 }
 
-function menu() {
-    window.open("menu.html");
-}
-
-
 function show_hideB() {
 
     var x = document.getElementById("Bur");
@@ -193,6 +188,12 @@ function show_hideS() {
     }
 
 }
+
+
+function menu() {
+    window.open("menu.html");
+}
+
 
 
 // function show_hideB() {
