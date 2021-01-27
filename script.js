@@ -1,34 +1,52 @@
 function request() {
 
     var i;
-
-
     fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
         .then(function(response) {
             return response.json()
         })
         .then((response) => {
             console.log(response)
-            var result = document.getElementById('result')
-            var str = "";
+                //  var result = document.getElementById('result')
+                //  var str = "";
+
+            var con = document.getElementsByClassName('container')[0];
+
+            for (i = 0; i < response.length; i++) {
+
+                var x = document.createElement("IMG");
+                x.setAttribute("src", response[i].url);
+                x.setAttribute("width", "304");
+                x.setAttribute("height", "228");
+                //   document.body.appendChild(x);
+                // < img src = $ { response[i].url } ></img>
+
+                var applyhtml = `<div class="row">
+                <div class="col-sm-1">` + response[i].id + `</div>
+                <div class="col-sm-5">` + response[i].title + `</div>
+                <div class="col-sm-6">` + x + `</div></div>`;
+
+                con.innerHTML += applyhtml;
+                // con.innerHTML += x;;
 
 
-            for (i = 0; i < 10; i++) {
+                /*  for (i = 0; i < 10; i++) {
                 str = str + 'Rider Id: ' + response[i].id + " " + "title: " + response[i].title;
                 str = str + "<br>";
             }
 
             result.innerHTML = str;
 
-        });
+        });*/
 
+            }
+        });
 }
 
 
 function photos() {
 
     var i;
-
 
     fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
         .then(function(response) {
@@ -71,10 +89,32 @@ function City() {
         .then((response) => {
             console.log(response)
 
-            var myCollection = document.getElementsByClassName("row");
+            //     var myCollection = document.getElementsByClassName("row");
 
 
-            var el = document.getElementsByClassName('col-sm-4');
+            var con = document.getElementsByClassName('container')[0];
+
+            for (i = 0; i < response.length; i++) {
+
+                var cityhtml = `<div class="row rounded-bottom">
+                <div class="col-sm-4">` + response[i].id + `</div>
+                <div class="col-sm-4">` + response[i].name + `</div>
+                <div class="col-sm-4">` + response[i].email + `</div>
+            </div>`;
+
+                con.innerHTML += cityhtml;
+
+
+                // el[j].innerHTML = response[i].id;
+                // j++;
+                // el[j].innerHTML = response[i].name;
+                // j++;
+                // el[j].innerHTML = response[i].email;
+
+
+            }
+
+            //var el = document.getElementsByClassName('col-sm-4');
 
 
             // for (i = 0; i < response.length; i++) {
@@ -85,24 +125,16 @@ function City() {
             //  }
             // <img src="http://placehold.it/600x600"></img>
 
-            for (i = 0, j = 0; i < response.length; j++, i++) {
+            /*    for (i = 0, j = 0; i < response.length; j++, i++) {
 
-                el[j].innerHTML = response[i].id;
-                j++;
-                el[j].innerHTML = response[i].name;
-                j++;
-                el[j].innerHTML = response[i].email;
-
-
-            }
+                    el[j].innerHTML = response[i].id;
+                    j++;
+                    el[j].innerHTML = response[i].name;
+                    j++;
+                    el[j].innerHTML = response[i].email;
 
 
-
-
-
-
-
-
+                }*/
 
 
             // var el = document.getElementsByClassName('row');
@@ -111,9 +143,6 @@ function City() {
 
             // element[i].innerHTML = response[i].id;
             // element[i].innerHTML = response[i].name;
-
-
-
 
 
         });
