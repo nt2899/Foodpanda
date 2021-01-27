@@ -14,17 +14,22 @@ function request() {
 
             for (i = 0; i < response.length; i++) {
 
-                var x = document.createElement("IMG");
+                var x = document.createElement("img");
                 x.setAttribute("src", response[i].url);
                 x.setAttribute("width", "304");
                 x.setAttribute("height", "228");
                 //   document.body.appendChild(x);
                 // < img src = $ { response[i].url } ></img>
 
+                // var applyhtml = `<div class="row">
+                // <div class="col-sm-1">` + response[i].id + `</div>
+                // <div class="col-sm-5">` + response[i].title + `</div>
+                // <div class="col-sm-6">` + x.outerHTML + `</div></div>`;
+                // var y = response[i].url;
                 var applyhtml = `<div class="row">
-                <div class="col-sm-1">` + response[i].id + `</div>
-                <div class="col-sm-5">` + response[i].title + `</div>
-                <div class="col-sm-6">` + x + `</div></div>`;
+                 <div class="col-sm-1">` + response[i].id + `</div>
+                 <div class="col-sm-5">` + response[i].title + `</div>
+                 <div class = "col-sm-6" > <img src="` + response[i].url + `"width = "304" height = "228" ></img></div></div>`;
 
                 con.innerHTML += applyhtml;
                 // con.innerHTML += x;;
@@ -61,7 +66,7 @@ function photos() {
 
                 var x = document.createElement("IMG");
                 x.setAttribute("src", response[i].url);
-                x.setAttribute("width", "304");
+                x.setAttribute("width", "auto");
                 x.setAttribute("height", "228");
                 document.body.appendChild(x);
                 // str = str + 'User Id: ' + response[i].id + " " + "title: " + response[i].title;
@@ -96,11 +101,9 @@ function City() {
 
             for (i = 0; i < response.length; i++) {
 
-                var cityhtml = `<div class="row rounded-bottom">
-                <div class="col-sm-4">` + response[i].id + `</div>
-                <div class="col-sm-4">` + response[i].name + `</div>
-                <div class="col-sm-4">` + response[i].email + `</div>
-            </div>`;
+                var cityhtml = `<div class = "row rounded-bottom">
+                    <div class = "col-sm-4">` + response[i].id + `</div><div class = "col-sm-4">` +
+                    response[i].name + `</div><div class = "col-sm-4">` + response[i].email + `</div></div>`;
 
                 con.innerHTML += cityhtml;
 
@@ -153,3 +156,62 @@ function City() {
 function menu() {
     window.open("menu.html");
 }
+
+
+function show_hideB() {
+
+    var x = document.getElementById("Bur");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+
+}
+
+function show_hideP() {
+
+    var x = document.getElementById("P");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+
+}
+
+function show_hideS() {
+
+    var x = document.getElementById("S");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+
+}
+
+
+// function show_hideB() {
+//     $(".article").show();
+//     $(".Burger").show();
+//     $(".Pizza").hide();
+//     $(".Steak").hide();
+// }
+
+// function show_hideP() {
+//     $(".article").show();
+//     $(".Burger").hide();
+//     $(".Pizza").show();
+//     $(".Steak").hide();
+// }
+
+// function show_hideS() {
+//     $(".article").show();
+//     $(".Burger").hide();
+//     $(".Pizza").hide();
+//     $(".Steak").show();
+// }
